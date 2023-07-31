@@ -1,10 +1,36 @@
 {
   "name": "dans-mustache",
+  "displayName": "Dan's Mustache",
   "version": "1.0.0",
   "description": "Custom Mustache language profile",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "publisher": "DanDun",
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "mustache",
+        "aliases": [
+          "Mustache (Dans)",
+          "mustache"
+        ],
+        "extensions": [
+          ".mustache",
+          ".mst",
+          ".mu",
+          ".stache"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "mustache",
+        "scopeName": "source.mustache",
+        "path": "./syntaxes/mustache.tmLanguage"
+      }
+    ]
   },
   "author": "DanDun",
   "license": "ISC"
