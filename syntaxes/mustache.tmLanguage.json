@@ -9,9 +9,6 @@
       "include": "#partials"
     },
     {
-      "include": "#comments"
-    },
-    {
       "include": "#blocks"
     },
     {
