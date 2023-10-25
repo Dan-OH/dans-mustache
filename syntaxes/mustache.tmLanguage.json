@@ -1,62 +1,29 @@
 {
   "name": "Mustache (HTML)",
   "scopeName": "source.mustache",
-  "fileTypes": ["mustache", "mst", "mu", "stache"],
+  "fileTypes": ["mustache"],
   "uuid": "93706aaa-9b66-4e9e-bb64-31a8ffcfb00d",
+  "foldingStartMarker": "(?x)\n\t\t(<(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl)\\b.*?>\n\t\t|<!--(?!.*-->)\n\t\t|\\{\\s*($|\\?>\\s*$|//|/\\*(.*\\*/\\s*$|(?!.*?\\*/)))\n\t\t)",
+  "foldingStopMarker": "(?x)\n\t\t(</(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl)>\n\t\t|^\\s*-->\n\t\t|(^|\\s)\\}\n\t\t)",
+
   "patterns": [
     {
-      "include": "#variables"
+      "begin": "\\{\\{!",
+      "end": "\\}\\}",
+      "name": "comment.block.mustache"
     },
     {
-      "include": "#partials"
-    },
-    {
-      "include": "#blocks"
+      "begin": "\\{\\{[{<>#^/]?",
+      "captures": {
+        "0": {
+          "name": "entity.name.tag.mustache"
+        }
+      },
+      "end": "\\}?\\}\\}",
+      "name": "source.mustache.embedded.html"
     },
     {
       "include": "text.html.basic"
     }
-  ],
-  "repository": {
-    "blocks": {
-      "begin": "\\{\\{\\s*(#|\\^)\\s?[A-Za-z0-9_.]+\\s*\\}\\}",
-      "end": "\\{\\{/\\s?[A-Za-z0-9_.]+\\}\\}",
-      "name": "entity.name.tag.mustache",
-      "patterns": [
-        {
-          "include": "$self"
-        },
-        {
-          "include": "#variables"
-        },
-        {
-          "include": "text.html.basic"
-        },
-        {
-          "match": ".",
-          "name": "string.unquoted.mustache"
-        }
-      ]
-    },
-    "partials": {
-      "patterns": [
-        {
-          "match": "\\{\\{>\\s*([A-Za-z0-9_.?]+)\\s*\\}\\}",
-          "name": "keyword.operator.mustache"
-        }
-      ]
-    },
-    "variables": {
-      "patterns": [
-        {
-          "match": "\\{\\{\\{\\s*([A-Za-z0-9_.?]+)\\s*\\}\\}\\}",
-          "name": "entity.name.tag.mustache"
-        },
-        {
-          "match": "\\{\\{\\s*([A-Za-z0-9_.?]+)\\s*\\}\\}",
-          "name": "entity.name.tag.mustache"
-        }
-      ]
-    }
-  }
+  ]
 }
