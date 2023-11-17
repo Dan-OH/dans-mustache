@@ -8,11 +8,13 @@
 
   "patterns": [
     {
+      "comment": "Comment",
       "begin": "\\{\\{!",
       "end": "\\}\\}",
       "name": "comment.block.mustache"
     },
     {
+      "comment": "Tag",
       "begin": "\\{\\{[{<>#^/]?",
       "captures": {
         "0": {
