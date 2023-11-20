@@ -8,18 +8,192 @@
 
   "patterns": [
     {
+      "comment": "Comment",
       "begin": "\\{\\{!",
       "end": "\\}\\}",
       "name": "comment.block.mustache"
     },
     {
-      "begin": "\\{\\{[{<>#^/]?",
+      "comment": "Escaped Variable",
+      "begin": "{{(?=\\s*>)",
       "captures": {
         "0": {
           "name": "storage.type"
         }
       },
-      "end": "\\}?\\}\\}",
+      "end": "}}",
+      "patterns": [
+        {
+          "match": "\\.",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        },
+        {
+          "match": ">",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        },
+        {
+          "match": "[-a-zA-Z0-9_]+",
+          "name": "constant.character.escape"
+        },
+        {
+          "match": "\\(*[-a-zA-Z0-9_]+\\)*",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        }
+      ],
+      "name": "constant.character.escape"
+    },
+    {
+      "comment": "Section",
+      "begin": "{{(?=\\s*#)",
+      "captures": {
+        "0": {
+          "name": "storage.type"
+        }
+      },
+      "end": "}}",
+      "patterns": [
+        {
+          "match": "\\.",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        },
+        {
+          "match": "#",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        },
+        {
+          "match": "[-a-zA-Z0-9_]+",
+          "name": "constant.character.escape"
+        }
+      ],
+      "name": "constant.character.escape"
+    },
+    {
+      "comment": "Section End",
+      "begin": "{{(?=\\s*/)",
+      "captures": {
+        "0": {
+          "name": "storage.type"
+        }
+      },
+      "end": "}}",
+      "patterns": [
+        {
+          "match": "\\.",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        },
+        {
+          "match": "/",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        },
+        {
+          "match": "[-a-zA-Z0-9_]+",
+          "name": "constant.character.escape"
+        }
+      ],
+      "name": "constant.character.escape"
+    },
+    {
+      "comment": "Inverted Section",
+      "begin": "{{(?=\\s*\\^)",
+      "captures": {
+        "0": {
+          "name": "storage.type"
+        }
+      },
+      "end": "}}",
+      "patterns": [
+        {
+          "match": "\\.",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        },
+        {
+          "match": "\\^",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        },
+        {
+          "match": "[-a-zA-Z0-9_]+",
+          "name": "constant.character.escape"
+        }
+      ],
+      "name": "constant.character.escape"
+    },
+    {
+      "comment": "Unescaped Variable Ampersand",
+      "begin": "{{(?=\\s*\\&)",
+      "captures": {
+        "0": {
+          "name": "storage.type"
+        }
+      },
+      "end": "}}",
+      "patterns": [
+        {
+          "match": "\\.",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        },
+        {
+          "match": "\\&",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        },
+        {
+          "match": "[-a-zA-Z0-9_]+",
+          "name": "constant.character.escape"
+        },
+        {
+          "match": "\\(*[-a-zA-Z0-9_]+\\)*",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        }
+      ],
+      "name": "constant.character.escape"
+    },
+    {
+      "comment": "Unescaped Variable",
+      "begin": "{{{",
+      "captures": {
+        "0": {
+          "name": "storage.type"
+        }
+      },
+      "end": "}}}",
+      "patterns": [
+        {
+          "match": "\\.",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        },
+        {
+          "match": "[-a-zA-Z0-9_]+",
+          "name": "constant.character.escape"
+        },
+        {
+          "match": "\\(*[-a-zA-Z0-9_]+\\)*",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        }
+      ],
+      "name": "constant.character.escape"
+    },
+    {
+      "comment": "Escaped Variable",
+      "begin": "{{",
+      "captures": {
+        "0": {
+          "name": "storage.type"
+        }
+      },
+      "end": "}}",
+      "patterns": [
+        {
+          "match": "\\.",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        },
+        {
+          "match": "[-a-zA-Z0-9_]+",
+          "name": "constant.character.escape"
+        },
+        {
+          "match": "\\(*[-a-zA-Z0-9_]+\\)*",
+          "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
+        }
+      ],
       "name": "constant.character.escape"
     },
     {
