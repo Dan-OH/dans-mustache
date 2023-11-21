@@ -165,7 +165,7 @@
           "name": "constant.character.escape"
         },
         {
-          "match": "\\(*[-a-zA-Z0-9_]+\\)*",
+          "match": "\\(.+\\)",
           "name": "support.constant.mustache punctuation.definition.section.end.begin.bracket.curly.mustache"
         }
       ],
