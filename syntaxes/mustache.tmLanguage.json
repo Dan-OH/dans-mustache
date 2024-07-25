@@ -13,104 +13,108 @@
       "name": "comment.mustache"
     },
     {
-      "name": "meta.tag.block.mustache",
-      "match": "({{)(\\$)(.+?)(}})",
+      "name": "constant.character.escape",
+      "begin": "{{{",
       "captures": {
-        "1": { "name": "storage.type" },
-        "2": { "name": "entity.other.attribute-name.mustache" },
-        "3": { "name": "constant.character.escape" },
-        "4": { "name": "storage.type" }
-      }
+        "0": {
+          "name": "storage.type"
+        }
+      },
+      "end": "}}}",
+      "patterns": [
+        {
+          "match": "\\.",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "\\(",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "\\)",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "\\$",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "/",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "\\^",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "<",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": ">",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "#",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "&",
+          "name": "entity.other.attribute-name.mustache"
+        }
+      ]
     },
     {
-      "name": "meta.tag.close.mustache",
-      "match": "({{)(/)(.+?)(}})",
+      "name": "constant.character.escape",
+      "begin": "{{",
       "captures": {
-        "1": { "name": "storage.type" },
-        "2": { "name": "entity.other.attribute-name.mustache" },
-        "3": { "name": "constant.character.escape" },
-        "4": { "name": "storage.type" }
-      }
-    },
-    {
-      "name": "meta.tag.delimiter.mustache",
-      "match": "({{)(=)(.*)\\s+?(.*)(=)(}})",
-      "captures": {
-        "1": { "name": "storage.type" },
-        "2": { "name": "entity.other.attribute-name.mustache" },
-        "3": { "name": "constant.character.mustache" },
-        "4": { "name": "constant.character.mustache" },
-        "5": { "name": "entity.name.tag.section.mustache" },
-        "6": { "name": "storage.type" }
-      }
-    },
-    {
-      "name": "meta.tag.inverted.mustache",
-      "match": "({{)(\\^)(.+?)(}})",
-      "captures": {
-        "1": { "name": "storage.type" },
-        "2": { "name": "entity.other.attribute-name.mustache" },
-        "3": { "name": "constant.character.escape" },
-        "4": { "name": "storage.type" }
-      }
-    },
-    {
-      "name": "meta.tag.parent.mustache",
-      "match": "({{)(<)(.+?)(}})",
-      "captures": {
-        "1": { "name": "storage.type" },
-        "2": { "name": "entity.other.attribute-name.mustache" },
-        "3": { "name": "constant.character.escape" },
-        "4": { "name": "storage.type" }
-      }
-    },
-    {
-      "name": "meta.tag.partial.mustache",
-      "match": "({{)(>)(.+?)(}})",
-      "captures": {
-        "1": { "name": "storage.type" },
-        "2": { "name": "entity.other.attribute-name.mustache" },
-        "3": { "name": "constant.character.escape" },
-        "4": { "name": "storage.type" }
-      }
-    },
-    {
-      "name": "meta.tag.section.mustache",
-      "match": "({{)(#)(.+?)(}})",
-      "captures": {
-        "1": { "name": "storage.type" },
-        "2": { "name": "entity.other.attribute-name.mustache" },
-        "3": { "name": "constant.character.escape" },
-        "4": { "name": "storage.type" }
-      }
-    },
-    {
-      "name": "meta.tag.unescaped.ampersand.mustache",
-      "match": "({{)(&)(.+?)(}})",
-      "captures": {
-        "1": { "name": "storage.type" },
-        "2": { "name": "entity.other.attribute-name.mustache" },
-        "3": { "name": "constant.character.escape" },
-        "4": { "name": "storage.type" }
-      }
-    },
-    {
-      "name": "meta.tag.unescaped.brackets.mustache",
-      "match": "({{{)(.+?)(}}})",
-      "captures": {
-        "1": { "name": "storage.type" },
-        "2": { "name": "constant.character.escape" },
-        "3": { "name": "storage.type" }
-      }
-    },
-    {
-      "name": "meta.tag.escaped.mustache",
-      "match": "({{)(.+?)(}})",
-      "captures": {
-        "1": { "name": "storage.type" },
-        "2": { "name": "constant.character.escape" },
-        "3": { "name": "storage.type" }
-      }
+        "0": {
+          "name": "storage.type"
+        }
+      },
+      "end": "}}",
+      "patterns": [
+        {
+          "match": "\\.",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "\\(",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "\\)",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "\\$",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "/",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "\\^",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "<",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": ">",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "#",
+          "name": "entity.other.attribute-name.mustache"
+        },
+        {
+          "match": "&",
+          "name": "entity.other.attribute-name.mustache"
+        }
+      ]
     },
     {
       "include": "text.html.basic"
