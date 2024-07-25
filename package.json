@@ -42,6 +42,12 @@
           "source.smarty": "smarty"
         }
       }
+    ],
+    "snippets": [
+      {
+        "language": "mustache",
+        "path": "./snippets/mustache.code-snippets"
+      }
     ]
   },
   "author": "DanDun",

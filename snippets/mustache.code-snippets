@@ -1,0 +1,173 @@
+{
+  "Web Name": {
+    "prefix": ["webname", "web name"],
+    "body": ["{{web.name}}"],
+    "description": "Web Name Comet Tag"
+  },
+  "Web Root": {
+    "prefix": ["webroot", "web root"],
+    "body": ["{{web.root}}"],
+    "description": "Web Root Comet Tag"
+  },
+  "Page Meta": {
+    "prefix": ["pagemeta", "page meta"],
+    "body": ["{{page.meta}}"],
+    "description": "Page Meta Comet Tag"
+  },
+  "Page Slug": {
+    "prefix": ["pageslug", "page slug"],
+    "body": ["{{page.slug}}"],
+    "description": "Page Slug Comet Tag"
+  },
+  "Page Parent Slug": {
+    "prefix": [
+      "parentSlug",
+      "parent slug",
+      "pageparentSlug",
+      "page parent slug"
+    ],
+    "body": ["{{page.parentSlug}}"],
+    "description": "Page Parent Slug Comet Tag"
+  },
+  "Page Path": {
+    "prefix": ["pagepath", "page path"],
+    "body": ["{{page.path}}"],
+    "description": "Page Path Comet Tag"
+  },
+  "Page Title": {
+    "prefix": ["pagetitle", "page title"],
+    "body": ["{{page.title}}"],
+    "description": "Page Title Comet Tag"
+  },
+  "Page Parent Title": {
+    "prefix": [
+      "parenttitle",
+      "parent title",
+      "pageparenttitle",
+      "page parent title"
+    ],
+    "body": ["{{page.parentTitle}}"],
+    "description": "Page Parent Title Comet Tag"
+  },
+  "Page Breadcrumb": {
+    "prefix": ["pagebreadcrumb", "page breadcrumb", "breadcrumbs"],
+    "body": ["{{{page.breadcrumb}}}"],
+    "description": "Page Breadcrumb Comet Tag"
+  },
+  "Year": {
+    "prefix": ["year"],
+    "body": ["{{year}}"],
+    "description": "Year Comet Tag"
+  },
+  "Page Includes Head": {
+    "prefix": ["pageincludeshead", "page includes head"],
+    "body": ["{{{common.template(page-includes-head)}}}"],
+    "description": "Page Includes Head Comet Tag"
+  },
+  "Page Header": {
+    "prefix": ["pageheader", "page header"],
+    "body": ["{{{common.template(page-header)}}}"],
+    "description": "Page Header Comet Tag"
+  },
+  "Page Footer": {
+    "prefix": ["pagefooter", "page footer"],
+    "body": ["{{{common.template(page-footer)}}}"],
+    "description": "Page Footer Comet Tag"
+  },
+  "Page Includes Body": {
+    "prefix": ["pageincludesbody", "page includes body"],
+    "body": ["{{{common.template(page-includes-body)}}}"],
+    "description": "Page Includes Body Comet Tag"
+  },
+  "Inline Content Area": {
+    "prefix": ["pagecontent", "page content", "inline content", "content"],
+    "body": ["<div id=\"content-$1\">{{{page.content($1)}}}</div>"],
+    "description": "Page Inline Content Area"
+  },
+  "Inline Banner Image": {
+    "prefix": [
+      "pagebannerimage",
+      "page banner image",
+      "inline bannerimage",
+      "bannerimage"
+    ],
+    "body": [
+      "<img id=\"content-$1\" src=\"{{{page.content($1)}}}\" width=\"$2\" height=\"$3\">"
+    ],
+    "description": "Page Inline Banner Image"
+  },
+  "Social Media Links": {
+    "prefix": ["socialmedialink", "social media links"],
+    "body": ["{{{socialMedia.links}}}"],
+    "description": "Social Media Links [OLD]"
+  },
+  "Social Media Dynamic Links": {
+    "prefix": ["socialmediadynamiclinks", "social media dynamic links"],
+    "body": ["{{{socialMedia.dynamicLinks}}}"],
+    "description": "Social Media Dynamic Links"
+  },
+  "Post Open Graph": {
+    "prefix": ["postopengraph", "post open graph"],
+    "body": ["{{{post.openGraph}}}"],
+    "description": "Post Open Graph Comet Tag"
+  },
+  "Post Head Title": {
+    "prefix": ["postheadtitle", "post head title"],
+    "body": ["{{{post.headTitle}}}"],
+    "description": "Post Head Title Comet Tag"
+  },
+  "Post Title": {
+    "prefix": ["posttitle", "post title"],
+    "body": ["{{{post.title}}}"],
+    "description": "Post Title Comet Tag"
+  },
+  "Post Content": {
+    "prefix": ["postcontent", "post content"],
+    "body": ["{{{post.post}}}"],
+    "description": "Post Content Comet Tag"
+  },
+  "Posts Listing": {
+    "prefix": ["postlisting", "post listing"],
+    "body": ["{{{post.listing}}}"],
+    "description": "Posts Listing Comet Tag"
+  },
+  "Post Tags": {
+    "prefix": ["posttags", "post tags"],
+    "body": ["{{{post.tags}}}"],
+    "description": "Post Tags Comet Tag"
+  },
+  "Post Tag Name": {
+    "prefix": ["posttagname", "post tag name"],
+    "body": ["{{{post.tagName}}}"],
+    "description": "Post Tag Name Comet Tag"
+  },
+  "Event Title": {
+    "prefix": ["eventtitle", "event title"],
+    "body": ["{{{event.title}}}"],
+    "description": "Event Title Comet Tag"
+  },
+  "Event Item": {
+    "prefix": ["eventitem", "event item"],
+    "body": ["{{{event.item}}}"],
+    "description": "Event Item Comet Tag"
+  },
+  "Event Listing": {
+    "prefix": ["eventlisting", "event listing"],
+    "body": ["{{{event.listing}}}"],
+    "description": "Event Listing Comet Tag"
+  },
+  "Event Homepage Sidebar Listing": {
+    "prefix": ["eventhomepagesidebarlisting", "event homepage sidebar listing"],
+    "body": ["{{{event.homepageSidebarListing}}}"],
+    "description": "Event Homepage Sidebar Listing Comet Tag"
+  },
+  "Page Extra Image Feature Banner": {
+    "prefix": ["featurebanner", "feature banner"],
+    "body": ["<div class=\"feature-banner\" style=\"background-image: url('{{& page.bannerImage }}');\">",
+      "  <div class=\"feature-banner-inner\">",
+      "    <h1 class=\"page-title\">{{page.title}}</h1>",
+      "  </div>",
+      "</div>"],
+    "description": "Page Extra Image Feature Banner"
+  }
+}
