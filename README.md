@@ -12,6 +12,8 @@ A custom language profile for Mustache files. **Note:** This extension is not co
 ### Code Snippets
 Snippets for common tags and templates. Type a prefix to quickly insert a snippet. Here's the full list of available snippets:
 
+![snippets showcase gif](img/snippets-showcase.gif)
+
 |**Prefix**|**Snippet**|**Description**|
 |----------|-----------|---------------|
 |`webname`,`web name`|`{{web.name}}`|Web Name Comet Tag|
@@ -44,6 +46,12 @@ Snippets for common tags and templates. Type a prefix to quickly insert a snippe
 |`eventlisting`,`event listing`|`{{{event.listing}}}`|Event Listing Comet Tag|
 |`eventhomepagesidebarlisting`|`{{{event.homepageSidebarListing}}}`|Event Homepage Sidebar Listing Comet Tag|
 |`featurebanner`,`feature banner`|```<div class="feature-banner" style="background-image: url('{{& page.bannerImage }}');"><div class="feature-banner-inner"><h1 class="page-title">{{page.title}}</h1></div></div>```|Page Extra Image Feature Banner|
+
+Banner Image snippet example:
+![Banner Image snippet example gif](img/snippets-bannerimage.gif)
+
+Feature Banner snippet example:
+![Feature Banner snippet example gif](img/snippets-featurebanner.gif)
 
 ---
 
